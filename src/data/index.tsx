@@ -62,73 +62,15 @@ export const SKILLS_DATA = {
 export const EXPERIENCE = [
   {
     id: 1,
-    company: "TechNova Solutions",
+    company: " Simon Fraser University",
     position: "Software Engineering Intern",
     dates: "May 2025 - Aug 2025",
     responsibilities: [
-      "Developed and maintained React-based frontend components, increasing user engagement by 15%.",
-      "Designed robust RESTful APIs using Node.js and Express.",
-      "Optimized database queries in PostgreSQL, reducing load times by 20%."
+      "test1%.",
+      "test2",
     ],
     technologies: ["React", "Node.js", "PostgreSQL", "Docker"]
   },
-  {
-    id: 2,
-    company: "University Research Lab",
-    position: "Undergraduate Research Assistant",
-    dates: "Jan 2024 - Present",
-    responsibilities: [
-      "Assisted in developing machine learning models for natural language processing tasks.",
-      "Processed and cleaned datasets of over 1 million records using Python and Pandas.",
-      "Co-authored a paper accepted into a regional undergraduate conference."
-    ],
-    technologies: ["Python", "PyTorch", "Pandas", "Jupyter"]
-  }
+
 ];
 
-export const PROJECTS = [
-  {
-    id: "1",
-    title: "EcoTrack AI",
-    category: "Machine Learning",
-    shortDesc: "An AI-powered application to monitor and optimize personal carbon footprint.",
-    longDesc: "EcoTrack AI leverages machine learning algorithms to analyze user spending and travel habits to estimate carbon footprints accurately. It provides actionable recommendations for sustainable living.",
-    tech: ["Python", "TensorFlow", "React", "MongoDB"],
-    github: "#",
-    demo: "#",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    id: "2",
-    title: "DevCollab Platform",
-    category: "Web Applications",
-    shortDesc: "Real-time collaborative code editor with integrated video chat.",
-    longDesc: "A complex real-time application allowing multiple developers to edit code simultaneously. Features syntax highlighting, live execution for JS/Python, and peer-to-peer video streaming.",
-    tech: ["Next.js", "Socket.io", "WebRTC", "Tailwind"],
-    github: "#",
-    demo: "#",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    id: "3",
-    title: "CryptoPortfolio Manager",
-    category: "Mobile Apps",
-    shortDesc: "Cross-platform mobile app for tracking cryptocurrency investments.",
-    longDesc: "Integrated with multiple exchange APIs to provide real-time portfolio valuation, interactive charting, and custom price alerts using push notifications.",
-    tech: ["React Native", "Firebase", "Redux", "REST APIs"],
-    github: "#",
-    demo: "#",
-    image: "https://images.unsplash.com/photo-1605792657660-596af9009e82?auto=format&fit=crop&q=80&w=800"
-  },
-  {
-    id: "4",
-    title: "Algorithm Visualizer",
-    category: "Academic Projects",
-    shortDesc: "Interactive web tool to visualize sorting and pathfinding algorithms.",
-    longDesc: "Designed to help computer science students understand complex algorithms. Features step-by-step execution, speed control, and code highlighting for algorithms like A*, Dijkstra, and QuickSort.",
-    tech: ["React", "TypeScript", "Framer Motion"],
-    github: "#",
-    demo: "#",
-    image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=800"
-  }
-];
