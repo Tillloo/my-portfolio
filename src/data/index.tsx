@@ -1,7 +1,4 @@
-import React from 'react';
-import { 
-  Code2, Database, Terminal, Globe, Cpu, 
-GitBranch, Layers, Server 
+import { Code2, Database, Terminal, Globe, Cpu, GitBranch, Layers, Server 
 } from 'lucide-react';
 
 export const PERSONAL_INFO = {
@@ -73,4 +70,3 @@ export const EXPERIENCE = [
   },
 
 ];
-
