@@ -7,4 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(), // <-- Add this plugin
   ],
+  base: process.env.VITE_BASE_URL || "/my-portfolio",
 })
