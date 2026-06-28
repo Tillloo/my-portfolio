@@ -1,4 +1,3 @@
-import React from 'react';
 import {SKILLS_DATA} from '../../data/index';
 
 export default function Skills() {

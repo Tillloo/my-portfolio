@@ -1,7 +1,7 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, GraduationCap, Star, Calendar } from 'lucide-react';
 import { PERSONAL_INFO } from '../../data';
+import AnimatedCounter from '../ui/AnimatedCounter';
 
 export default function About() {
   return (
@@ -63,6 +63,7 @@ export default function About() {
             ].map((stat, idx) => (
               <div key={idx} className="p-6 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700/50 flex flex-col items-center justify-center text-center group hover:border-sky-500/50 transition-colors">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400 mb-2">
+                  <AnimatedCounter end={stat.count} suffix={stat.suffix} />
                 </div>
                 <div className="text-sm font-medium text-slate-400 group-hover:text-slate-300 transition-colors">{stat.label}</div>
               </div>
