@@ -1,5 +1,7 @@
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
+import About from './components/sections/About';
+import Skills from './components/sections/Skills';
 
 export default function App() {
   return (
@@ -7,6 +9,8 @@ export default function App() {
       <Header />
 
       <main>
+          <About />
+          <Skills />
         
       </main>
 
