@@ -72,3 +72,17 @@ export const EXPERIENCE = [
   },
 
 ];
+
+
+export const PROJECTS = [
+  {
+    id: "1",
+    title: " Test 1",
+    category: "Machine Learning",
+    shortDesc: "monitor and optimize personal carbon footprint.",
+    tech: ["Python", "TensorFlow", "React", "MongoDB"],
+    github: "#",
+    demo: "#",
+  },
+
+];
