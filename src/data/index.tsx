@@ -63,10 +63,12 @@ export const EXPERIENCE = [
     position: "Software Engineering Intern",
     dates: "May 2025 - Aug 2025",
     responsibilities: [
-      "test1%.",
-      "test2",
+      "Automated previously manual time-off request and timesheet submission workflows for SFU’s Administrative Technical Solutions team, creating scalable solutions that improved operational efficiency and user experience.",
+      "Developed workflow automation solutions using Microsoft Power Automate and Robotic Process Automation tools, leveraging APIs to enhance cross-departmental efficiency and streamline business processes.",
+      "Created requirement specification documents by analyzing workflow inefficiencies and defining functional and non-functional requirements, while also supporting documentation of workflows, known issues, and training materials to ensure successful implementation and adoption.",
+      "Collaborated with an Agile Scrum team to plan, design, implement, and maintain IT solutions for SFU’s administrative systems, actively participating in daily stand-ups and sprint ceremonies."
     ],
-    technologies: ["React", "Node.js", "PostgreSQL", "Docker"]
+    technologies: ["Microsoft Power Automate", "UiPath", "React", "Node.js", "PostgreSQL", "Docker"]
   },
 
 ];
