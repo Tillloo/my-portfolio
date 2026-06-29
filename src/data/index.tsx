@@ -60,7 +60,7 @@ export const EXPERIENCE = [
   {
     id: 1,
     company: " Simon Fraser University",
-    position: "Software Engineering Intern",
+    position: "Junior Application Developer",
     dates: "May 2025 - Aug 2025",
     responsibilities: [
       "Automated previously manual time-off request and timesheet submission workflows for SFU’s Administrative Technical Solutions team, creating scalable solutions that improved operational efficiency and user experience.",
