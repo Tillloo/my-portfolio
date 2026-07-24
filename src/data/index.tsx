@@ -80,6 +80,8 @@ export const PROJECTS = [
     title: " Test 1",
     category: "Machine Learning",
     shortDesc: "monitor and optimize personal carbon footprint.",
+    longDesc: "A web application that allows users to monitor and optimize their personal carbon footprint by tracking their daily activities and providing personalized recommendations for reducing their environmental impact.",
+    image: "/images/Diabetic.png",
     tech: ["Python", "TensorFlow", "React", "MongoDB"],
     github: "#",
     demo: "#",
