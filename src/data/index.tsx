@@ -77,14 +77,41 @@ export const EXPERIENCE = [
 export const PROJECTS = [
   {
     id: "1",
-    title: " Test 1",
+    title: "Diabetic Retinopathy Disease Scanner",
     category: "Machine Learning",
-    shortDesc: "monitor and optimize personal carbon footprint.",
-    longDesc: "A web application that allows users to monitor and optimize their personal carbon footprint by tracking their daily activities and providing personalized recommendations for reducing their environmental impact.",
+    shortDesc:
+      "AI-powered web application for detecting diabetic retinopathy from retinal images.",
+    longDesc:
+      "Built a full-stack medical imaging application using Flask, TensorFlow, and Keras to classify diabetic retinopathy severity from retinal images. The project uses a ResNet-based deep learning model that achieved 92% diagnostic accuracy. Automated image preprocessing and data augmentation pipelines streamlined training on thousands of images while enabling real-time predictions through a user-friendly web interface.",
     image: "/images/Diabetic.png",
-    tech: ["Python", "TensorFlow", "React", "MongoDB"],
-    github: "#",
+    tech: ["Python", "TensorFlow", "Flask", "Keras", "HTML", "CSS", "JavaScript"],
+    github: "https://github.com/Tillloo/Diabetic-Retinopathy-Scanner",
     demo: "#",
   },
-
+  {
+    id: "2",
+    title: "Salary Predictor",
+    category: "Machine Learning",
+    shortDesc:
+      "Full-stack application that predicts salaries using machine learning.",
+    longDesc:
+      "Developed a full-stack salary prediction application with a Python backend and a React frontend. Cleaned and processed over 40,000 salary records using Pandas and NumPy before training an XGBoost model to generate salary predictions based on user experience, education, and job-related features. Connected the frontend and backend with REST APIs for real-time predictions.",
+    image: "/images/Salary_Predictor.png",
+    tech: ["Python", "React", "Pandas", "NumPy", "XGBoost", "Tailwind CSS"],
+    github: "https://github.com/CMPT-419/Salary-Predictor",
+    demo: "#",
+  },
+  {
+    id: "3",
+    title: "Socket Messaging Application",
+    category: "Software Development",
+    shortDesc:
+      "Multi-threaded messaging platform built with Java sockets and JavaFX.",
+    longDesc:
+      "Designed and implemented a real-time messaging application using TCP sockets and multithreading in Java. Built an interactive JavaFX interface supporting login, account switching, messaging, replies, reactions, and deletions. Applied object-oriented design principles to create reusable client and server components that are scalable and maintainable.",
+    image: "/images/Group_Chat.png",
+    tech: ["Java", "JavaFX", "TCP", "Sockets", "Multithreading", "OOP"],
+    github: "https://github.com/Tillloo/Group-Chat-Messenger",
+    demo: "#",
+  },
 ];
