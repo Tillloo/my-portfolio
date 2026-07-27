@@ -70,7 +70,7 @@ export default function Header() {
                   {link.name}
                 </a>
               ))}
-              <a href="#" className="mt-2 px-4 py-3 rounded-xl bg-sky-500 text-slate-950 text-center font-semibold">
+              <a href={PERSONAL_INFO.resume} className="mt-2 px-4 py-3 rounded-xl bg-sky-500 text-slate-950 text-center font-semibold">
                 Download Resume
               </a>
             </nav>
