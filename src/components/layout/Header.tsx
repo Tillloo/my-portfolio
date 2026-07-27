@@ -36,7 +36,7 @@ export default function Header() {
               {link.name}
             </a>
           ))}
-          <a href={PERSONAL_INFO.resume} className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-medium transition-all border border-white/5">
+          <a href={PERSONAL_INFO.resume}   className="px-4 py-2 rounded-full bg-sky-500 hover:bg-sky-600 text-slate-950 text-sm font-semibold transition-colors">
             Resume
           </a>
         </nav>
