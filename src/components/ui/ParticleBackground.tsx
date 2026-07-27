@@ -14,13 +14,13 @@ export default function ParticleBackground() {
 
     const particles: Array<{ x: number; y: number; dx: number; dy: number; size: number }> = [];
     
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 60; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         dx: (Math.random() - 0.5) * 0.5,
         dy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1,
+        size: Math.random() * 3 + 1,
       });
     }
 
@@ -39,7 +39,7 @@ export default function ParticleBackground() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(56, 189, 248, 0.2)';
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.5)';
         ctx.fill();
       });
     };
