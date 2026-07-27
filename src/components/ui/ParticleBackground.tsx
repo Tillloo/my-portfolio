@@ -14,7 +14,7 @@ export default function ParticleBackground() {
 
     const particles: Array<{ x: number; y: number; dx: number; dy: number; size: number }> = [];
     
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 85; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
