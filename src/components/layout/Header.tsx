@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
-import { PERSONAL_INFO } from '../../data';
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -36,7 +35,7 @@ export default function Header() {
               {link.name}
             </a>
           ))}
-          <a href="#" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-medium transition-all border border-white/5">
+          <a href="#" className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-medium transition-all border border-white/5">
             Resume
           </a>
         </nav>
