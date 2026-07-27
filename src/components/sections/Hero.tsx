@@ -65,10 +65,10 @@ export default function Hero() {
               Contact Me
             </a>
             <div className="flex items-center gap-3 ml-2">
-              <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-slate-800/50 text-slate-300 hover:text-white hover:bg-slate-700 transition-all">
+              <a href={PERSONAL_INFO.github} className="p-3 rounded-full bg-slate-800/50 text-slate-300 hover:text-white hover:bg-slate-700 transition-all">
                 <FiGithub size={20} />
               </a>
-              <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-slate-800/50 text-slate-300 hover:text-white hover:bg-slate-700 transition-all">
+              <a href={PERSONAL_INFO.linkedin} className="p-3 rounded-full bg-slate-800/50 text-slate-300 hover:text-white hover:bg-slate-700 transition-all">
                 <FiLinkedin size={20} />
               </a>
             </div>
