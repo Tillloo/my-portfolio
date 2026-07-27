@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { PERSONAL_INFO, ROLES } from '../../data';
+import ParticleBackground from '../ui/ParticleBackground';
 import TechOrbit from '../ui/TechOrbit';
 
 export default function Hero() {
@@ -17,7 +18,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      
+      <ParticleBackground />
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10 w-full">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
