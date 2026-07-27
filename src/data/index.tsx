@@ -8,6 +8,7 @@ export const PERSONAL_INFO = {
   github: "https://github.com/Tillloo",
   linkedin: "https://www.linkedin.com/in/sandeepd5/",
   location: "Vancouver, Canada",
+  resume: "/Resume.pdf"
 };
 
 export const ROLES = ["Software Engineer", "Full Stack Developer", "AI Enthusiast", "Problem Solver"];
