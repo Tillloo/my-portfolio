@@ -6,8 +6,8 @@ export const PERSONAL_INFO = {
   role: "Computer Science Student",
   email: "sda183@sfu.ca",
   github: "https://github.com/Tillloo",
-  linkedin: "https://www.linkedin.com/mynetwork/grow/",
-  location: "Vancouver, Canada"
+  linkedin: "https://www.linkedin.com/in/sandeepd5/",
+  location: "Vancouver, Canada",
 };
 
 export const ROLES = ["Software Engineer", "Full Stack Developer", "AI Enthusiast", "Problem Solver"];

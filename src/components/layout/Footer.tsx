@@ -16,10 +16,10 @@ export default function Footer() {
         </p>
 
         <div className="flex items-center gap-4">
-          <a href="https://github.com" className="text-slate-400 hover:text-white transition-colors">
+          <a href={PERSONAL_INFO.github} className="text-slate-400 hover:text-white transition-colors">
             <FaGithub size={20} />
           </a>
-          <a href="https://linkedin.com/in/sandeepd5/" className="text-slate-400 hover:text-white transition-colors">
+          <a href={PERSONAL_INFO.linkedin} className="text-slate-400 hover:text-white transition-colors">
             <FaLinkedin size={20} />
           </a>
           <a href={`mailto:${PERSONAL_INFO.email}`} className="text-slate-400 hover:text-white transition-colors">
