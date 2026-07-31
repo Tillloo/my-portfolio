@@ -71,7 +71,20 @@ export const EXPERIENCE = [
     ],
     technologies: ["Microsoft Power Automate", "UiPath", "React", "Node.js", "PostgreSQL", "Docker"]
   },
-
+  {
+    id: 2,
+    company: "Best Buy",
+    position: "Customer Service",
+    dates: "Mar. 2022 - Feb. 2023",
+    location: "Richmond, BC",
+    responsibilities: [
+    "Managed customer returns, assessed product issues, and recommended alternative solutions to maintain satisfaction and retain sales.",
+    "Helped customers through BestBuy warranty claims and product registrations step by step.",
+    "Counted, balanced, and reconciled cash registers at the end of every shift, tracking down and fixing any discrepancies.",
+    "Picked, packed, and processed online orders, checked customer IDs, and managed store pickups to provide a faster shopping experience for customers."
+    ],
+    technologies: ["Customer Service", "Cash Handling", "POS Systems", "Conflict Resolution"]
+  }
 ];
 
 
