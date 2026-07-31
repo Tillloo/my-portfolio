@@ -115,4 +115,18 @@ export const PROJECTS = [
     github: "https://github.com/Tillloo/Group-Chat-Messenger",
     demo: "#",
   },
+  {
+    id: "4",
+    title: "Reddit Submission Analyzer",
+    category: "Data Science & NLP",
+    shortDesc:
+      "End-to-end data pipeline and statistical analysis tool examining what drives engagement in Reddit posts.",
+    longDesc:
+      "Developed a comprehensive data processing and NLP pipeline in Python to analyze hundreds of thousands of Reddit submissions across news and story subreddits. Integrated Hugging Face transformer models (twitter-roBERTa) and NLTK VADER for sentiment analysis, alongside custom readability scoring. Applied non-parametric statistical testing (Mann-Whitney U) to uncover core engagement drivers such as headline simplicity, story length, and optimal posting times.",
+    image: "/images/Reddit_Analyzer.png",
+    tech: ["Python", "Pandas", "NumPy", "Hugging Face", "NLTK", "SciPy", "Matplotlib"],
+    github: "https://github.com/Tillloo/Reddit-Submission-Analyzer",
+    demo: "#",
+  }
+
 ];
