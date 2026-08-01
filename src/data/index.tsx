@@ -113,7 +113,7 @@ export const PROJECTS = [
     image: "/images/Salary_Predictor.png",
     tech: ["Python", "React", "Pandas", "NumPy", "XGBoost", "Tailwind CSS"],
     github: "https://github.com/CMPT-419/Salary-Predictor",
-    demo: "#",
+    demo: "https://salary-predictor-b4iis2cqq-tillloos-projects.vercel.app/",
   },
   {
     id: "3",
