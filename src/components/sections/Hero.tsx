@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import ContactModal from '../ui/ContactModal';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { PERSONAL_INFO, ROLES } from '../../data';
 import ParticleBackground from '../ui/ParticleBackground';
@@ -8,6 +9,7 @@ import TechOrbit from '../ui/TechOrbit';
 
 export default function Hero() {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -61,9 +63,14 @@ export default function Hero() {
             <a href="#projects" className="px-8 py-3 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition-all hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:-translate-y-1">
               View Projects
             </a>
-            <a href="#contact" className="px-8 py-3 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-100 font-medium border border-slate-700 transition-all hover:-translate-y-1">
+            <button
+              type="button"
+              onClick={() => setIsContactOpen(true)}
+              className="px-8 py-3 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-100 font-medium border border-slate-700 transition-all hover:-translate-y-1"
+              style={{ cursor: 'pointer' }}
+            >
               Contact Me
-            </a>
+            </button>
             <div className="flex items-center gap-3 ml-2">
               <a href={PERSONAL_INFO.github} className="p-3 rounded-full bg-slate-800/50 text-slate-300 hover:text-white hover:bg-slate-700 transition-all">
                 <FiGithub size={20} />
@@ -84,6 +91,11 @@ export default function Hero() {
           <TechOrbit />
         </motion.div>
       </div>
+
+      <ContactModal
+        isOpen={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+      />
 
       <motion.div 
         initial={{ opacity: 0 }}
