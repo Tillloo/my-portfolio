@@ -6,7 +6,7 @@ export default function ExperienceTimeline() {
   return (
     <section id="experience" className="py-24 relative">
       <div className="max-w-[68rem] mx-auto px-6">
-          <motion.div 
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -16,7 +16,11 @@ export default function ExperienceTimeline() {
           <div className="w-20 h-1 bg-sky-500 mx-auto rounded-full" />
         </motion.div>
 
-        <div className="relative border-l border-slate-952 ml-4 md:ml-0 md:pl-0">
+        {/* Updated to border-l-2 (2px width) for mobile */}
+        <div className="relative border-l-2 border-white md:border-l-0 ml-4 md:ml-0 md:pl-0">
+          {/* Desktop Vertical Timeline Bar updated to w-0.5 (2px width) */}
+          <div className="hidden md:block absolute left-[16.6%] top-0 bottom-0 w-0.5 bg-white -translate-x-1/2" />
+
           {EXPERIENCE.map((exp, idx) => (
             <motion.div 
               key={exp.id}
@@ -26,17 +30,17 @@ export default function ExperienceTimeline() {
               transition={{ delay: idx * 0.2 }}
               className="mb-12 relative pl-8 md:pl-0"
             >
-              <div className="md:grid md:grid-cols-5 items-start relative group">
-                {/* Timeline Dot */}
-                <div className="absolute -left-[41px] md:left-[19.5%] md:-translate-x-1/2 mt-1.5 w-4 h-4 rounded-full bg-slate-900 border-2 border-sky-400 z-10 group-hover:bg-sky-400 transition-colors" />
+              <div className="md:grid md:grid-cols-6 items-start relative group">
+                {/* Timeline Dot slightly enlarged (w-5 h-5) to balance the thicker line */}
+                <div className="absolute -left-[41px] md:left-[16.6%] md:-translate-x-1/2 mt-1.5 w-5 h-5 rounded-full bg-slate-900 border-2 border-sky-400 z-10 group-hover:bg-sky-400 transition-colors" />
                 
                 {/* Dates (Desktop Left side) */}
-                <div className="hidden md:block col-span-1 text-right pr-12 text-sm text-slate-200 font-medium pt-1">
+                <div className="hidden md:flex md:justify-end md:items-start col-span-1 pr-10 lg:pr-12 text-base lg:text-lg text-slate-200 font-semibold pt-1 whitespace-nowrap">
                   {exp.dates}
                 </div>
 
                 {/* Content */}
-                <div className="md:col-span-4 p-6 rounded-2xl bg-slate-900/80 border border-slate-700/80 hover:bg-slate-900/90 hover:border-slate-600 transition-colors md:ml-12">
+                <div className="md:col-span-5 p-6 rounded-2xl bg-slate-900/80 border border-slate-700/80 hover:bg-slate-900/90 hover:border-slate-600 transition-colors md:ml-8">
                   <div className="md:hidden text-sm text-sky-400 font-medium mb-2">{exp.dates}</div>
                   <h3 className="text-xl font-bold text-slate-100">{exp.position}</h3>
                   <div className="flex items-center gap-2 text-slate-400 mt-1 mb-4">

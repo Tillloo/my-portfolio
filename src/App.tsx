@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback  } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import TerminalLoadingScreen from './components/ui/TerminalLoadingScreen';
 import Header from './components/layout/Header';
@@ -12,6 +12,7 @@ import Projects from './components/sections/Project';
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const hasVisited = sessionStorage.getItem('portfolioVisited');
@@ -29,6 +30,29 @@ export default function App() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const attemptPlayback = async () => {
+      try {
+        await video.play();
+      } catch (error) {
+        console.warn('Background video autoplay was blocked:', error);
+      }
+    };
+
+    if (video.readyState >= 2) {
+      attemptPlayback();
+    } else {
+      video.addEventListener('canplay', attemptPlayback, { once: true });
+    }
+
+    return () => {
+      video.removeEventListener('canplay', attemptPlayback);
+    };
+  }, []);
+
   const handleLoadingComplete = useCallback(() => {
     setIsLoading(false);
     sessionStorage.setItem('portfolioVisited', 'true');
@@ -37,10 +61,13 @@ export default function App() {
   return (
     <div className="relative min-h-screen overflow-x-hidden text-slate-200 selection:bg-sky-500/30 selection:text-sky-200 font-sans">
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
+        webkit-playsinline="true"
         className="fixed inset-0 h-full w-full object-cover z-0"
         aria-hidden="true"
       >
