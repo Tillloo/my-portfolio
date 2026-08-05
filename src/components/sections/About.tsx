@@ -38,7 +38,7 @@ export default function About() {
                 { label: "Interests", value: "AI, Web, Cloud", icon: <Star size={18} /> },
                 { label: "Availability", value: "Summer 2026", icon: <Calendar size={18} /> }
               ].map((item, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-4 rounded-xl bg-slate-900/50 border border-slate-800">
+                <div key={idx} className="flex items-start gap-3 p-4 rounded-xl bg-slate-900/80 border border-slate-700/80">
                   <div className="text-sky-400 mt-0.5">{item.icon}</div>
                   <div>
                     <div className="text-xs text-slate-500 font-medium mb-1">{item.label}</div>
@@ -61,7 +61,7 @@ export default function About() {
               { count: 3, label: "Years Coding", suffix: "+" },
               { count: 1, label: "Internships", suffix: "" }
             ].map((stat, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700/50 flex flex-col items-center justify-center text-center group hover:border-sky-500/50 transition-colors">
+              <div key={idx} className="p-6 rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 border border-slate-700/80 flex flex-col items-center justify-center text-center group hover:border-sky-500/50 transition-colors">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400 mb-2">
                   <AnimatedCounter end={stat.count} suffix={stat.suffix} />
                 </div>

@@ -22,7 +22,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-0 w-full z-40 transition-all duration-300 ${isScrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-white/5 py-4' : 'bg-slate-950/80 backdrop-blur-md border-b border-transparent py-6'}`}>
+    <header className={`fixed top-0 w-full z-40 transition-all duration-300 ${isScrolled ? 'bg-slate-900/50 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_30px_rgba(2,6,23,0.35)] py-4' : 'bg-slate-900/30 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_30px_rgba(2,6,23,0.25)] py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a href="#home" target="_self" className="text-xl font-bold text-white flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-400 to-indigo-500 flex items-center justify-center text-sm">SD</div>

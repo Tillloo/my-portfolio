@@ -55,12 +55,12 @@ export default function Hero() {
             </AnimatePresence>
           </div>
 
-          <p className="text-slate-400 max-w-lg leading-relaxed text-lg">
+          <p className="text-slate-150 max-w-lg leading-relaxed text-lg">
             I'm a passionate Computer Science student dedicated to building scalable software and exploring the frontiers of Artificial Intelligence.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 mt-4">
-            <a href="#projects" className="px-8 py-3 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition-all hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:-translate-y-1">
+            <a href="#projects" target="_self" className="px-8 py-3 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold transition-all hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:-translate-y-1">
               View Projects
             </a>
             <button

@@ -35,7 +35,18 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen text-slate-200 selection:bg-sky-500/30 selection:text-sky-200 font-sans">
+    <div className="relative min-h-screen overflow-x-hidden text-slate-200 selection:bg-sky-500/30 selection:text-sky-200 font-sans">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="fixed inset-0 h-full w-full object-cover z-0"
+        aria-hidden="true"
+      >
+        <source src="/images/Background.mp4" type="video/mp4" />
+      </video>
+      <div className="fixed inset-0 z-0 bg-[radial-gradient(circle_at_top,rgba(15,23,42,0.2),transparent_65%)]" />
       
       {/* Mouse Gradient Effect */}
       <div 
@@ -51,6 +62,7 @@ export default function App() {
 
       {!isLoading && (
         <motion.div
+          className="relative z-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}

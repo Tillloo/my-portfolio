@@ -27,7 +27,7 @@ export default function Projects() {
   }, [selectedProject]);
 
   return (
-    <section id="projects" className="py-24 relative bg-slate-900/20">
+    <section id="projects" className="py-24 relative bg-slate-900/0">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ export default function Projects() {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   filter === cat 
                     ? 'bg-sky-500/10 text-sky-400 border border-sky-500/50' 
-                    : 'bg-slate-800/50 text-slate-400 border border-slate-700 hover:bg-slate-800'
+                    : 'bg-slate-800/80 text-slate-400 border border-slate-700 hover:bg-slate-800'
                 }`}
               >
                 {cat}
@@ -64,7 +64,7 @@ export default function Projects() {
               placeholder="Search projects or tech..." 
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-slate-900/50 border border-slate-700 rounded-full py-2 pl-10 pr-4 text-sm text-slate-200 focus:outline-none focus:border-sky-500 transition-colors placeholder-slate-500"
+              className="w-full bg-slate-900/80 border border-slate-700 rounded-full py-2 pl-10 pr-4 text-sm text-slate-200 focus:outline-none focus:border-sky-500 transition-colors placeholder-slate-500"
             />
           </div>
         </div>
@@ -80,14 +80,14 @@ export default function Projects() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="group flex flex-col bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] cursor-pointer"
+                className="group flex flex-col bg-slate-900/80 border border-slate-700/80 rounded-2xl overflow-hidden hover:-translate-y-2 transition-all hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
                 <div className="relative h-48 overflow-hidden">
-                  <div className="absolute inset-0 bg-slate-900/80 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-slate-900/90 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500" />
                   <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   <div className="absolute top-4 left-4 z-20">
-                    <span className="px-3 py-1 text-xs font-medium rounded-full bg-slate-900/80 text-sky-400 border border-sky-900/50 backdrop-blur-sm">
+                    <span className="px-3 py-1 text-xs font-medium rounded-full bg-slate-900/95 text-sky-400 border border-sky-900/50 backdrop-blur-sm">
                       {project.category}
                     </span>
                   </div>

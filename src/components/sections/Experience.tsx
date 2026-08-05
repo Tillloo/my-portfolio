@@ -16,7 +16,7 @@ export default function ExperienceTimeline() {
           <div className="w-20 h-1 bg-sky-500 mx-auto rounded-full" />
         </motion.div>
 
-        <div className="relative border-l border-slate-700 ml-4 md:ml-0 md:pl-0">
+        <div className="relative border-l border-slate-952 ml-4 md:ml-0 md:pl-0">
           {EXPERIENCE.map((exp, idx) => (
             <motion.div 
               key={exp.id}
@@ -31,12 +31,12 @@ export default function ExperienceTimeline() {
                 <div className="absolute -left-[41px] md:left-[19.5%] md:-translate-x-1/2 mt-1.5 w-4 h-4 rounded-full bg-slate-900 border-2 border-sky-400 z-10 group-hover:bg-sky-400 transition-colors" />
                 
                 {/* Dates (Desktop Left side) */}
-                <div className="hidden md:block col-span-1 text-right pr-12 text-sm text-slate-400 font-medium pt-1">
+                <div className="hidden md:block col-span-1 text-right pr-12 text-sm text-slate-200 font-medium pt-1">
                   {exp.dates}
                 </div>
 
                 {/* Content */}
-                <div className="md:col-span-4 p-6 rounded-2xl bg-slate-800/30 border border-slate-700/50 hover:bg-slate-800/50 hover:border-slate-600 transition-colors md:ml-12">
+                <div className="md:col-span-4 p-6 rounded-2xl bg-slate-900/80 border border-slate-700/80 hover:bg-slate-900/90 hover:border-slate-600 transition-colors md:ml-12">
                   <div className="md:hidden text-sm text-sky-400 font-medium mb-2">{exp.dates}</div>
                   <h3 className="text-xl font-bold text-slate-100">{exp.position}</h3>
                   <div className="flex items-center gap-2 text-slate-400 mt-1 mb-4">
@@ -55,7 +55,7 @@ export default function ExperienceTimeline() {
 
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, i) => (
-                      <span key={i} className="px-3 py-1 text-xs font-medium rounded-full bg-slate-900/80 text-slate-300 border border-slate-700">
+                      <span key={i} className="px-3 py-1 text-xs font-medium rounded-full bg-slate-900/95 text-slate-300 border border-slate-700">
                         {tech}
                       </span>
                     ))}
