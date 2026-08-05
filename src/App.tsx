@@ -34,8 +34,14 @@ export default function App() {
     const video = videoRef.current;
     if (!video) return;
 
+    // Imperatively set properties required for WebKit / iOS Safari autoplay compliance
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+
     const attemptPlayback = async () => {
       try {
+        video.muted = true;
         await video.play();
       } catch (error) {
         console.warn('Background video autoplay was blocked:', error);
@@ -48,8 +54,24 @@ export default function App() {
       video.addEventListener('canplay', attemptPlayback, { once: true });
     }
 
+    // Mobile fallback: Resume video on any user interaction if autoplay was blocked on refresh
+    const handleUserInteraction = () => {
+      if (video.paused) {
+        attemptPlayback();
+      }
+    };
+
+    window.addEventListener('touchstart', handleUserInteraction, { passive: true });
+    window.addEventListener('touchend', handleUserInteraction, { passive: true });
+    window.addEventListener('click', handleUserInteraction, { passive: true });
+    window.addEventListener('scroll', handleUserInteraction, { passive: true });
+
     return () => {
       video.removeEventListener('canplay', attemptPlayback);
+      window.removeEventListener('touchstart', handleUserInteraction);
+      window.removeEventListener('touchend', handleUserInteraction);
+      window.removeEventListener('click', handleUserInteraction);
+      window.removeEventListener('scroll', handleUserInteraction);
     };
   }, []);
 
@@ -67,8 +89,9 @@ export default function App() {
         muted
         playsInline
         preload="auto"
-        webkit-playsinline="true"
-        className="fixed inset-0 h-full w-full object-cover z-0"
+        disablePictureInPicture
+        disableRemotePlayback
+        className="fixed inset-0 h-full w-full object-cover z-0 pointer-events-none"
         aria-hidden="true"
       >
         <source src="/images/Background.mp4" type="video/mp4" />
