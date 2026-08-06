@@ -12,6 +12,7 @@ import Projects from './components/sections/Project';
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -39,12 +40,26 @@ export default function App() {
     video.defaultMuted = true;
     video.playsInline = true;
 
+    const handlePlaying = () => {
+      setIsPlaying(true);
+    };
+
+    const handlePauseOrEnded = () => {
+      setIsPlaying(false);
+    };
+
+    video.addEventListener('playing', handlePlaying);
+    video.addEventListener('pause', handlePauseOrEnded);
+    video.addEventListener('ended', handlePauseOrEnded);
+
     const attemptPlayback = async () => {
       try {
         video.muted = true;
         await video.play();
+        setIsPlaying(true);
       } catch (error) {
         console.warn('Background video autoplay was blocked:', error);
+        setIsPlaying(false);
       }
     };
 
@@ -56,20 +71,23 @@ export default function App() {
 
     // Mobile fallback: Resume video on any user interaction if autoplay was blocked on refresh
     const handleUserInteraction = () => {
-      if (video.paused) {
-        attemptPlayback();
-      }
+      attemptPlayback();
     };
 
     window.addEventListener('touchstart', handleUserInteraction, { passive: true });
     window.addEventListener('touchend', handleUserInteraction, { passive: true });
+    window.addEventListener('pointerdown', handleUserInteraction, { passive: true });
     window.addEventListener('click', handleUserInteraction, { passive: true });
     window.addEventListener('scroll', handleUserInteraction, { passive: true });
 
     return () => {
+      video.removeEventListener('playing', handlePlaying);
+      video.removeEventListener('pause', handlePauseOrEnded);
+      video.removeEventListener('ended', handlePauseOrEnded);
       video.removeEventListener('canplay', attemptPlayback);
       window.removeEventListener('touchstart', handleUserInteraction);
       window.removeEventListener('touchend', handleUserInteraction);
+      window.removeEventListener('pointerdown', handleUserInteraction);
       window.removeEventListener('click', handleUserInteraction);
       window.removeEventListener('scroll', handleUserInteraction);
     };
@@ -91,7 +109,9 @@ export default function App() {
         preload="auto"
         disablePictureInPicture
         disableRemotePlayback
-        className="fixed inset-0 h-full w-full object-cover z-0 pointer-events-none"
+        className={`fixed inset-0 h-full w-full object-cover z-0 pointer-events-none transition-opacity duration-700 ${
+          isPlaying ? 'opacity-100' : 'opacity-0'
+        }`}
         aria-hidden="true"
       >
         <source src="/images/Background.mp4" type="video/mp4" />
