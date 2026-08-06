@@ -120,16 +120,38 @@ export const PROJECTS = [
     title: "Socket Messaging Application",
     category: "Software Development",
     shortDesc:
-      "Multi-threaded messaging platform built with Java sockets and JavaFX.",
+      "Multi-client messaging platform built with Java networking, TCP sockets, and JavaFX.",
     longDesc:
-      "Designed and implemented a real-time messaging application using TCP sockets and multithreading in Java. Built an interactive JavaFX interface supporting login, account switching, messaging, replies, reactions, and deletions. Applied object-oriented design principles to create reusable client and server components that are scalable and maintainable.",
+      "Designed and implemented a real-time messaging application using Java networking with a centralized server and multiple concurrent clients connected through TCP sockets. Developed a client-server architecture where the server manages connections, routes messages, and maintains communication between users. Implemented multithreading to handle multiple clients simultaneously while ensuring reliable message delivery. Built an interactive JavaFX interface supporting authentication, account switching, messaging, replies, reactions, and deletions. Applied object-oriented design principles to create modular and maintainable client and server components.",
     image: "/images/Group_Chat.png",
-    tech: ["Java", "JavaFX", "TCP", "Sockets", "Multithreading", "OOP"],
+    tech: ["Java", "JavaFX", "TCP", "Sockets", "Networking", "Multithreading", "OOP"],
     github: "https://github.com/Tillloo/Group-Chat-Messenger",
+    demo: "#",
+},
+  {
+    id: "4",
+    title: "WC26 Winners",
+    category: "Full Stack Development",
+    shortDesc:
+      "Interactive World Cup dashboard featuring match details, player statistics, maps, and fan engagement features.",
+    longDesc:
+      "Built a full-stack FIFA World Cup 2026 dashboard using React, TypeScript, Express, Sequelize, PostgreSQL, and Docker. Developed features including detailed match pages, user comments, player statistics, and an interactive Google Maps integration for exploring tournament venues. Implemented a quiz system that tracks results and performance for authenticated users, along with JWT-based authentication and role-based authorization. Created moderator accounts with additional privileges to manage comments and create, edit, and delete quizzes.",
+    image: "/images/WC26-Winners.png",
+    tech: [
+      "React",
+      "TypeScript",
+      "Express",
+      "PostgreSQL",
+      "Sequelize",
+      "Docker",
+      "Google Maps API",
+      "Tailwind CSS"
+    ],
+    github: "https://github.com/bobbychan-cmpt/final-project-group-13",
     demo: "#",
   },
   {
-    id: "4",
+    id: "5",
     title: "Reddit Submission Analyzer",
     category: "Data Science & NLP",
     shortDesc:
@@ -140,6 +162,24 @@ export const PROJECTS = [
     tech: ["Python", "Pandas", "NumPy", "Hugging Face", "NLTK", "SciPy", "Matplotlib"],
     github: "https://github.com/Tillloo/Reddit-Submission-Analyzer",
     demo: "#",
-  }
-
+  },
+  {
+    id: "6",
+    title: "BMP Image Photoshop",
+    category: "Software Development",
+    shortDesc:
+      "Desktop image editing application with common image processing operations built in Python.",
+    longDesc:
+      "Developed a desktop image editor using Python, Tkinter, Pillow, and NumPy for loading and manipulating BMP images. Implemented image processing algorithms including grayscale conversion, ordered dithering using a Bayer matrix, automatic color leveling, brightness adjustment, color inversion, rotation, vertical flipping, and zooming. Designed an intuitive graphical user interface with side-by-side image comparisons for selected operations, providing an interactive environment for demonstrating fundamental digital image processing techniques.",
+    image: "/images/Mini-Photoshop.png",
+    tech: [
+      "Python",
+      "Tkinter",
+      "Pillow",
+      "NumPy",
+      "Image Processing"
+    ],
+    github: "https://github.com/Tillloo/Mini-Photoshop",
+    demo: "https://private-user-images.githubusercontent.com/177103848/632626180-7a2f0f47-6682-4736-9d85-4776319fb88b.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODYwNTQ5MDAsIm5iZiI6MTc4NjA1NDYwMCwicGF0aCI6Ii8xNzcxMDM4NDgvNjMyNjI2MTgwLTdhMmYwZjQ3LTY2ODItNDczNi05ZDg1LTQ3NzYzMTlmYjg4Yi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwODA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDgwNlQyMjE2NDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00ZjNlZGE5ZTBiY2U0OWQ4MjI4MjVhNDUxYTVlNmMwNjY1N2VmNWU3MTQwNGY0NWI5ZTlkOGQ3Y2NmZDcxMzQzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9dmlkZW8lMkZtcDQifQ.Z3XCwgF6TCjA8dsgVWELPFz7OIZaJ9YEb0MzOP2EExY",
+  },
 ];

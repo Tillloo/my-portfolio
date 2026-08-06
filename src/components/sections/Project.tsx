@@ -152,7 +152,7 @@ export default function Projects() {
 
               <div className="h-64 sm:h-80 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10" />
-                <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover" />
+                <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover scale-90" />
               </div>
 
               <div className="p-6 sm:p-8 -mt-20 relative z-20">
