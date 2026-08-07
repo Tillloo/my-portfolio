@@ -148,7 +148,7 @@ export const PROJECTS = [
       "Tailwind CSS"
     ],
     github: "https://github.com/bobbychan-cmpt/final-project-group-13",
-    demo: "#",
+    demo: "http://34.182.6.205/",
   },
   {
     id: "5",

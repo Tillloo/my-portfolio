@@ -30,7 +30,7 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 w-fit">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-sm font-medium text-slate-300">Available for Summer 2026 Internships</span>
+            <span className="text-sm font-medium text-slate-300">Available for Fall 2026 Internships</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-slate-100 tracking-tight">
@@ -56,7 +56,13 @@ export default function Hero() {
           </div>
 
           <p className="text-slate-150 max-w-lg leading-relaxed text-lg">
-            I'm a passionate Computer Science student dedicated to building scalable software and exploring the frontiers of Artificial Intelligence.
+            I'm a passionate Computer Science student dedicated to building scalable software and exploring the modern frontiers of Artificial Intelligence. 
+            I believe good code should be reliable, maintainable, and occasionally come with a bad joke. 
+            I would usually tell you a UDP joke right about now
+            <span className="font-bold text-sky-400 italic">
+              , but you might not get it
+            </span>
+            <span> 😂.</span>
           </p>
 
           <div className="flex flex-wrap items-center gap-4 mt-4">
